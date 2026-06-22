@@ -41,7 +41,7 @@ int main() {
     } else {
         std::cout << "Select Client To Scan For: \n";
 
-        for (int i = 0; i < clientList.size(); i++)
+        for (size_t i = 0; i < clientList.size(); i++)
             std::cout << (i + 1) << ". " << clientList.at(i) << "\n";
 
         int option;
