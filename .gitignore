@@ -2,5 +2,11 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/sstool
+/.vs/
 /.strings/
+/Debug/
+/Release/
+/sstool/Debug/
+/sstool/Release/
+/sstool/x64/
+/x64/

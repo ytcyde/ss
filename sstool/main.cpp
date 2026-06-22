@@ -1,4 +1,5 @@
 #include "PatternScan.h"
+#include <string_view>
 
 std::vector<std::string_view> novaPatterns = {
     "aHR0cDovL2FwaS5ub3ZhY2xpZW50LmxvbC93ZWJob29rLnR4dA==",
@@ -8,6 +9,11 @@ std::vector<std::string_view> novaPatterns = {
     "/assets/font/font.ttf", //also works for argon
     "Lithium is not initialized! Skipping event: ",
     "Error in hash"
+};
+
+std::vector<std::string_view> silkSkidClientPatterns = {
+    "269788df6305de37f5f62f2431b2b0c3.png",
+    "SilkGuard.class"
 };
 
 std::vector<std::string_view> universalPatterns = {
@@ -22,11 +28,13 @@ std::vector<std::string_view> universalPatterns = {
 
 std::vector<std::string> clientList = {
     "Nova Client",
-    "All (Might not work for all clients)"
+    "All (Might not work for all clients)",
+    "Silk Client"
 };
 
 int main() {
     std::cout << "Screenshare tool | Made by lvstrng | v1.0\n";
+    std::cout << "Screenshare tool | Forked by Cyde | v1.1\n";
 
     DWORD pid;
     std::cout << "Minecraft PID:";
@@ -56,6 +64,10 @@ int main() {
             }
             case 2: {
                     scannable = universalPatterns;
+                    break;
+            }
+            case 3: {
+                    scannable = silkSkidClientPatterns;
                     break;
             }
         }
